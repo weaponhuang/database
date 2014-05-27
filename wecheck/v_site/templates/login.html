@@ -1,0 +1,46 @@
+{% extends "header.html" %}
+{% block title %}首页{% endblock %}
+{% block content %} 
+<!-- Modal -->
+    <div class="modal-content">
+    	{% if login_error %}
+    	<p style="red">用户名或者密码错误,请重新登录!</p>
+    	{% endif %}
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">登录</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form" action="/login/" method='post'>
+         {% csrf_token %}
+		  <div class="form-group">
+		    <label for="inputAccount" class="col-sm-2 control-label">账号</label>
+		    <div class="col-sm-10">
+		      <input type="tel" class="form-control" id="inputAccount" placeholder="学号/教工号" name="username">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+		    <div class="col-sm-10">
+		      <input type="password" class="form-control" id="inputPassword" placeholder="密码" name="password">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <div class="checkbox">
+		        <label>
+		          <input type="checkbox">记住账号
+		        </label>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="submit" class="btn btn-primary">登录</button>
+		      <input type="hidden" name="next" value="{{ next|escape }}"  />
+		    </div>
+		  </div>
+		 </form>
+      </div>
+    </div><!-- /.modal-content -->
+{% endblock %}

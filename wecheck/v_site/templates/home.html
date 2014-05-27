@@ -1,0 +1,113 @@
+{% extends "header.html" %}
+{% block title %}首页{% endblock %}
+{% block content %}
+		<div class="row">
+			<center>
+				<img src="\static\imgs\sysu.jpg"/>
+			</center>
+		</div> 
+		
+		<div class="col-md-10 col-md-offset-1  panel-body">
+			<form>
+			<div class="form-group">
+				<div class="row">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-2">
+							<input type="text" class="form-control" placeholder="请输入课程关键字" />
+						</div>
+						<button type="submit" class="btn btn-primary">查询<span class="glyphicon glyphicon-search"></span></button>
+					</div>
+					<div class="col-md-10 col-md-offset-2">
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">学院<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">软件学院</a></li>
+								<li><a href="#">信息科学技术学院</a></li>
+								<li><a href="#">……</a></li>
+							</ul> 
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">专业<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">……</a></li>
+							</ul> 
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">教师<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">……</a></li>
+							</ul> 
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">星期<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">……</a></li>
+							</ul> 
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">时间段<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">……</a></li>
+							</ul> 
+						</div>							
+					</div>
+				</div>
+			</div>
+			</form>
+		</div>
+
+		<div class="col-md-7 col-md-offset-1">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<div class="panel-title">查询结果</div>
+				</div>
+				<table class="table table-striped table-bordered table-hover">
+					<tr>
+						<th>课程名称</th>
+						<th>教师</th>
+						<th>学院</th>
+						<th>专业</th>
+						<th>时间段</th>
+					</tr>
+					<tr>
+						<td><a href="#">course_name</a></td>
+						<td>teacher</td>
+						<td>school</td>
+						<td>major</td>
+						<td>time</td>
+					</tr>
+					<tr>
+						<td><a href="#">course_name</a></td>
+						<td>teacher</td>
+						<td>school</td>
+						<td>major</td>
+						<td>time</td>
+					</tr>
+					<tr>
+						<td><a href="#">course_name</a></td>
+						<td>teacher</td>
+						<td>school</td>
+						<td>major</td>
+						<td>time</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">十大热门课程</div>
+				</div>
+				<div class="panel-body">
+					<ul>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+{% endblock %}

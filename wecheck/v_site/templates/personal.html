@@ -1,0 +1,81 @@
+{% extends "header.html" %}
+{% block title %}个人主页{% endblock %}
+{% block content %}
+		<div class="col-md-8 col-md-offset-2">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="panel-title">
+					个人信息
+					</div>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="stuid" class="control-label col-sm-2">学号</label>
+							<div class="col-sm-6">
+								<input id="userName" type="text" class="form-control" value="{{student.stu_id}}"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="userName" class="control-label col-sm-2">姓名</label>
+							<div class="col-sm-6">
+								<input id="userName" type="text" class="form-control" value="{{student.stu_name}}"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="academy" class="control-label col-sm-2">学院</label>
+							<div class="col-sm-6">
+								<input id="academy" type="text" class="form-control" value="{{student.stu_academy.a_name}}"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="grade" class="control-label col-sm-2">年级</label>
+							<div class="col-sm-6">
+								<input id="grade" type="text" class="form-control" value="{{student.stu_grade}}"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email" class="control-label col-sm-2">邮箱</label>
+							<div class="col-sm-6">
+								<input id="email" type="text" class="form-control" value="{{student.stu_email}}"/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1 col-sm-offset-2">
+								<button type="submit" class="btn btn-primary">保存</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			
+			<p></p>
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<div class="panel-title">我的蹭课</div>
+							</div>
+							<table class="table table-striped table-bordered table-hover">
+								<tr>
+									<th>课程名称</th>
+									<th>教师</th>
+									<th>学院</th>
+									<th>专业</th>
+									<th>时间段</th>
+								</tr>
+								{% for item in courses %}
+								<tr>
+									<td><a href="/check_course/">{{item.cou_name}}</a></td>
+									<td>{{item.cou_teacher.tea_name}}</td>
+									<td>{{item.cou_academy.aca_name}}</td>
+									<td>{{item.cou_subject.sub_name}}</td>
+									<td>{{item.cou_time}}</td>
+								</tr>
+								{% endfor %}
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}

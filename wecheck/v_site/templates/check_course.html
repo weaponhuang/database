@@ -1,0 +1,56 @@
+{% extends "header.html" %}
+{% block title %}个人主页{% endblock %}
+{% block content %}
+	<div class="col-md-10 col-md-offset-1">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="panel-title">课程信息</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<table class="table table-striped table-bordered">
+						<tr>
+							<th>课程名称</th>
+							<th>课程编号</th>
+							<th>教师</th>
+							<th>学院</th>
+							<th>专业</th>
+							<th>时间段</th>
+							<th>点赞数</th>
+							<th>吐槽数</th>
+						</tr>
+						<tr>
+							<td>course_name</td>
+							<td></td>
+							<td>teacher</td>
+							<td>school</td>
+							<td>major</td>
+							<td>time</td>
+							<td>zans</td>
+							<td>tucaos</td>
+						</tr>
+					</table>
+				</div>
+	
+				<div class="row">
+					<button id="join" class="btn btn-primary" onclick="join()" >蹭课</button>
+					<button id="quit" class="btn btn-primary" onclick="quit()" >不蹭了</button>
+					<button id="add_comment" class="btn btn-primary" onclick="" >添加评价</button>
+				</div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">学生评价</div>
+					<div id="comment-area" class="panel-body">
+					<!-- 例子 -->
+						<div class="panel panel-default">阿斯顿发围绕的法定日期为——<span class="time">（评论日期）</span></div>
+						<div class="panel panel-default">阿斯蒂芬却无法撒莲都区我感觉枫蓝国际圣地呕吐房交会的减肥啦阿斯顿浪费卡机诶哦日趋诶哦改天关键时刻力宏刚瑞文 阿斯蒂芬拉上扣扣水电费拉萨的健康覅哦啊色u让司法局——（评论日期） </div>
+						<div class="panel panel-default">阿斯顿发围绕的法定日期为——<span class="time">（评论日期）</span></div>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+		</div>
+	</div>
+{% endblock %}
